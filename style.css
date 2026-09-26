@@ -1,0 +1,90 @@
+body {
+    background-color: #F79AC0;
+    color: #710193;
+    text-align: center;
+    font-family: Playfair;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: Playfair;
+}
+
+button {
+    padding: 70px 80px;
+    font-size: 50px;
+    color: white;
+    background: red;
+    text-align: center;
+}
+button:hover{
+    background:#cc0000;
+    cursor:pointer;
+}
+
+h2 {
+    font-size: 55px;
+    color: #0047ab;
+}
+
+body {
+    transition: background-color 1s ease;
+    text-align: center;
+}
+
+#typingText {
+    color: lime;
+    font-family: monospace;
+    text-shadow: 0 0 5px lime, 0 0 10px lime;
+}
+
+#cursor {
+    color: lime;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.glitch {
+    position: relative;
+    color: lime;
+    font-family: monospace;
+    text-shadow: 0 0 5px lime, 0 0 10px lime;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+}
+
+.glitch::before {
+    color: red;
+    animation: glitchTop 0.2s infinite;
+}
+
+.glitch::after {
+    color: blue;
+    animation: glitchBottom 0.2s infinite;
+}
+
+@keyframes glitchTop {
+    0% { transform: translate(0); }
+    50% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitchBottom {
+    0% { transform: translate(0); }
+    50% { transform: translate(2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+canvas{
+    border:3px solid black;
+}
